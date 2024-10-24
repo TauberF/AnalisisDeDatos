@@ -7,6 +7,7 @@ import seaborn as sns
 
 #%% Leer csv paises
 df_paises = pd.read_csv('Country-data.csv', sep = ',')
+df_paises
 
 # %% Graficar la matriz de correlacion de df_paises sin columna 'country'
 plt.figure(figsize = (10, 6))
@@ -17,6 +18,7 @@ plt.show()
 # Realizar analisis de componentes principales
 #%% Elegir solo las variables numericas
 df_paises_num = df_paises.select_dtypes(include = ['float64', 'int64'])
+df_paises_num
 
 #%% Normalizar los datos
 scaler = StandardScaler()
